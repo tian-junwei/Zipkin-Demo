@@ -23,7 +23,7 @@ public class HomeController {
    
     @RequestMapping("foo")
     public String foo() throws InterruptedException, IOException {
-        Random random = new Random();
+        /*Random random = new Random();
         int sleep= random.nextInt(100);
         TimeUnit.MILLISECONDS.sleep(sleep);
         Request request = new Request.Builder().url("http://localhost:9091/bar").get().build();  //service3
@@ -32,6 +32,7 @@ public class HomeController {
         request = new Request.Builder().url("http://localhost:9092/tar").get().build();  //service4
         response = client.newCall(request).execute();
        result += response.body().string();
-        return " [service2 sleep " + sleep+" ms]" + result;
+        return " [service2 sleep " + sleep+" ms]" + result;*/
+    	return "foo";
     }
 }

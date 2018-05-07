@@ -26,32 +26,37 @@
             <artifactId>spring-boot-starter-actuator</artifactId>
         </dependency>
 
+		<dependency>
+		    <groupId>com.squareup.okhttp3</groupId>
+		    <artifactId>okhttp</artifactId>
+		    <version>3.10.0</version>
+		</dependency>
         <dependency>
             <groupId>io.zipkin.brave</groupId>
             <artifactId>brave-core</artifactId>
-            <version>3.9.0</version>
+            <version>4.13.4</version>
         </dependency>
         <!-- https://mvnrepository.com/artifact/io.zipkin.brave/brave-http -->
         <dependency>
             <groupId>io.zipkin.brave</groupId>
             <artifactId>brave-http</artifactId>
-            <version>3.9.0</version>
+            <version>4.13.4</version>
         </dependency>
         <dependency>
             <groupId>io.zipkin.brave</groupId>
             <artifactId>brave-spancollector-http</artifactId>
-            <version>3.9.0</version>
+            <version>4.13.4</version>
         </dependency>
         <dependency>
             <groupId>io.zipkin.brave</groupId>
             <artifactId>brave-web-servlet-filter</artifactId>
-            <version>3.9.0</version>
+            <version>4.13.4</version>
         </dependency>
 
         <dependency>
             <groupId>io.zipkin.brave</groupId>
             <artifactId>brave-okhttp</artifactId>
-            <version>3.9.0</version>
+            <version>4.13.4</version>
         </dependency>
 
         <!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-api -->
