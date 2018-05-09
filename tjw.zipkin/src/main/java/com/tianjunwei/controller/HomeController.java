@@ -19,6 +19,9 @@ public class HomeController {
 
     @RequestMapping("start")
     public String start(HttpServletRequest request1,HttpServletResponse response1) throws InterruptedException, IOException {
-        return "start";
+        
+    	String data  = restTemplate.getForObject("http://localhost:9090/foo", String.class);
+    	
+    	return data;
     }
 }
