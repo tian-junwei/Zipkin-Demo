@@ -29,6 +29,8 @@ public class TraceDemo {
 
         Tracer tracer = tracing.tracer();
         Span span = tracer.newTrace().name("encode").start();
+        span.tag("sr", "");
+        span.tag("ss", "");
         try {
             doSomethingExpensive();
         } finally {
@@ -36,7 +38,7 @@ public class TraceDemo {
         }
 
 
-        Span twoPhase = tracer.newTrace().name("twoPhase").start();
+     /*   Span twoPhase = tracer.newTrace().name("twoPhase").start();
         try {
             Span prepare = tracer.newChild(twoPhase.context()).name("prepare").start();
             try {
@@ -53,7 +55,7 @@ public class TraceDemo {
         } finally {
             twoPhase.finish();
         }
-
+*/
 
         sleep(1000);
         System.in.read();
