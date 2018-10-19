@@ -3,4 +3,12 @@
   <groupId>com.tianjunwei</groupId>
   <artifactId>zipkin</artifactId>
   <version>0.0.1-SNAPSHOT</version>
+
+  <modules>
+    <module>tjw.zipkin</module>
+    <module>tjw.zipkin2</module>
+    <module>tjw.zipkin3</module>
+    <module>tjw.zipkin4</module>
+  </modules>
+
 </project>
