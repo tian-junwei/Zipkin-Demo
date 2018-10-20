@@ -3,4 +3,47 @@
   <groupId>com.tianjunwei</groupId>
   <artifactId>zipkin</artifactId>
   <version>0.0.1-SNAPSHOT</version>
+
+  <modules>
+
+    <module>tjw.zipkin</module>
+    <module>tjw.zipkin2</module>
+    <module>tjw.zipkin3</module>
+    <module>tjw.zipkin4</module>
+
+  </modules>
+
+  <dependencies>
+
+    <dependency>
+      <groupId>io.zipkin.brave</groupId>
+      <artifactId>brave-instrumentation-spring-web</artifactId>
+      <version>5.4.3</version>
+    </dependency>
+
+    <dependency>
+      <groupId>io.zipkin.brave</groupId>
+      <artifactId>brave</artifactId>
+      <version>5.4.3</version>
+    </dependency>
+
+    <dependency>
+      <groupId>io.zipkin.brave</groupId>
+      <artifactId>brave-context-slf4j</artifactId>
+      <version>4.19.2</version>
+    </dependency>
+
+    <dependency>
+      <groupId>io.zipkin.brave</groupId>
+      <artifactId>brave-instrumentation-spring-webmvc</artifactId>
+      <version>5.4.3</version>
+    </dependency>
+    <dependency>
+      <groupId>io.zipkin.reporter2</groupId>
+      <artifactId>zipkin-sender-okhttp3</artifactId>
+      <version>2.6.0</version>
+    </dependency>
+
+  </dependencies>
+
 </project>

@@ -3,6 +3,8 @@ package com.tianjunwei.config;
 import java.util.ArrayList;
 import java.util.List;
 
+import brave.context.slf4j.MDCScopeDecorator;
+import brave.propagation.ThreadLocalCurrentTraceContext;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
@@ -52,10 +54,11 @@ public class TracingConfiguration extends WebMvcConfigurerAdapter {
 
   @Bean 
   Tracing tracing(@Value("${zipkin.service:brave-webmvc-example2}") String serviceName) {
-	  return Tracing.newBuilder()
-        .localServiceName(serviceName)
-        .propagationFactory(ExtraFieldPropagation.newFactory(B3Propagation.FACTORY, "user-name"))
-        .spanReporter(spanReporter()).build();
+      return Tracing.newBuilder()
+              .localServiceName(serviceName)
+              .propagationFactory(ExtraFieldPropagation.newFactory(B3Propagation.FACTORY, "user-name"))
+              .spanReporter(spanReporter()).currentTraceContext(ThreadLocalCurrentTraceContext.newBuilder()
+                      .addScopeDecorator(MDCScopeDecorator.create()).build()).build();
   }
 
   @Bean 
